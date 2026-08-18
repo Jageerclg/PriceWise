@@ -1,0 +1,774 @@
+{
+  "products": [
+    {
+      "id": "product-001",
+      "name": "Galaxy S24 Ultra",
+      "slug": "galaxy-s24-ultra",
+      "category": "smartphones",
+      "description": "Premium flagship smartphone with advanced AI features, 200MP camera, and S Pen included. Perfect for professionals and content creators.",
+      "image": "images/products/galaxy-s24-ultra.jpg",
+      "rating": 4.7,
+      "offers": [
+        {
+          "storeId": "store-001",
+          "storeName": "TechHub India",
+          "price": 129999,
+          "currency": "INR",
+          "availability": "In Stock",
+          "url": "#sample-link-techhub-s24",
+          "lastUpdated": "2026-08-17T10:00:00Z"
+        },
+        {
+          "storeId": "store-002",
+          "storeName": "Digital Depot",
+          "price": 134999,
+          "currency": "INR",
+          "availability": "In Stock",
+          "url": "#sample-link-digitaldepot-s24",
+          "lastUpdated": "2026-08-17T10:00:00Z"
+        },
+        {
+          "storeId": "store-003",
+          "storeName": "ElectroMart",
+          "price": 127999,
+          "currency": "INR",
+          "availability": "Limited Stock",
+          "url": "#sample-link-electromart-s24",
+          "lastUpdated": "2026-08-17T10:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": "product-002",
+      "name": "iPhone 15 Pro Max",
+      "slug": "iphone-15-pro-max",
+      "category": "smartphones",
+      "description": "Apple's most advanced iPhone with titanium design, A17 Pro chip, and improved camera system. The ultimate smartphone experience.",
+      "image": "images/products/iphone-15-pro-max.jpg",
+      "rating": 4.8,
+      "offers": [
+        {
+          "storeId": "store-001",
+          "storeName": "TechHub India",
+          "price": 159999,
+          "currency": "INR",
+          "availability": "In Stock",
+          "url": "#sample-link-techhub-iphone15",
+          "lastUpdated": "2026-08-17T10:00:00Z"
+        },
+        {
+          "storeId": "store-004",
+          "storeName": "GadgetZone",
+          "price": 156999,
+          "currency": "INR",
+          "availability": "In Stock",
+          "url": "#sample-link-gadgetzone-iphone15",
+          "lastUpdated": "2026-08-17T10:00:00Z"
+        },
+        {
+          "storeId": "store-005",
+          "storeName": "Prime Electronics",
+          "price": 162999,
+          "currency": "INR",
+          "availability": "Pre-order",
+          "url": "#sample-link-prime-iphone15",
+          "lastUpdated": "2026-08-17T10:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": "product-003",
+      "name": "OnePlus 12",
+      "slug": "oneplus-12",
+      "category": "smartphones",
+      "description": "Flagship killer with Hasselblad camera, Snapdragon 8 Gen 3, and fast charging. Excellent performance and value.",
+      "image": "images/products/oneplus-12.jpg",
+      "rating": 4.5,
+      "offers": [
+        {
+          "storeId": "store-002",
+          "storeName": "Digital Depot",
+          "price": 64999,
+          "currency": "INR",
+          "availability": "In Stock",
+          "url": "#sample-link-digitaldepot-oneplus12",
+          "lastUpdated": "2026-08-17T10:00:00Z"
+        },
+        {
+          "storeId": "store-003",
+          "storeName": "ElectroMart",
+          "price": 62999,
+          "currency": "INR",
+          "availability": "In Stock",
+          "url": "#sample-link-electromart-oneplus12",
+          "lastUpdated": "2026-08-17T10:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": "product-004",
+      "name": "MacBook Pro 14-inch",
+      "slug": "macbook-pro-14-inch",
+      "category": "laptops",
+      "description": "Apple's powerful laptop with M3 Pro chip, stunning Liquid Retina XDR display, and all-day battery life. Perfect for professionals.",
+      "image": "images/placeholders/product-placeholder.svg",
+      "rating": 4.9,
+      "offers": [
+        {
+          "storeId": "store-001",
+          "storeName": "TechHub India",
+          "price": 199999,
+          "currency": "INR",
+          "availability": "In Stock",
+          "url": "#sample-link-techhub-macbook",
+          "lastUpdated": "2026-08-17T10:00:00Z"
+        },
+        {
+          "storeId": "store-004",
+          "storeName": "GadgetZone",
+          "price": 194999,
+          "currency": "INR",
+          "availability": "Limited Stock",
+          "url": "#sample-link-gadgetzone-macbook",
+          "lastUpdated": "2026-08-17T10:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": "product-005",
+      "name": "Dell XPS 15",
+      "slug": "dell-xps-15",
+      "category": "laptops",
+      "description": "Premium Windows laptop with Intel Core i7, NVIDIA graphics, and OLED display. Ideal for creative professionals and gaming.",
+      "image": "images/placeholders/product-placeholder.svg",
+      "rating": 4.6,
+      "offers": [
+        {
+          "storeId": "store-002",
+          "storeName": "Digital Depot",
+          "price": 154999,
+          "currency": "INR",
+          "availability": "In Stock",
+          "url": "#sample-link-digitaldepot-xps15",
+          "lastUpdated": "2026-08-17T10:00:00Z"
+        },
+        {
+          "storeId": "store-003",
+          "storeName": "ElectroMart",
+          "price": 149999,
+          "currency": "INR",
+          "availability": "In Stock",
+          "url": "#sample-link-electromart-xps15",
+          "lastUpdated": "2026-08-17T10:00:00Z"
+        },
+        {
+          "storeId": "store-005",
+          "storeName": "Prime Electronics",
+          "price": 159999,
+          "currency": "INR",
+          "availability": "In Stock",
+          "url": "#sample-link-prime-xps15",
+          "lastUpdated": "2026-08-17T10:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": "product-006",
+      "name": "Sony WH-1000XM5",
+      "slug": "sony-wh-1000xm5",
+      "category": "headphones",
+      "description": "Industry-leading noise canceling headphones with exceptional sound quality, 30-hour battery life, and comfortable design.",
+      "image": "images/placeholders/product-placeholder.svg",
+      "rating": 4.8,
+      "offers": [
+        {
+          "storeId": "store-001",
+          "storeName": "TechHub India",
+          "price": 29999,
+          "currency": "INR",
+          "availability": "In Stock",
+          "url": "#sample-link-techhub-sony",
+          "lastUpdated": "2026-08-17T10:00:00Z"
+        },
+        {
+          "storeId": "store-002",
+          "storeName": "Digital Depot",
+          "price": 27999,
+          "currency": "INR",
+          "availability": "In Stock",
+          "url": "#sample-link-digitaldepot-sony",
+          "lastUpdated": "2026-08-17T10:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": "product-007",
+      "name": "Apple AirPods Pro 2",
+      "slug": "apple-airpods-pro-2",
+      "category": "headphones",
+      "description": "Next-generation AirPods with active noise cancellation, spatial audio, and improved sound quality. The perfect Apple ecosystem companion.",
+      "image": "images/placeholders/product-placeholder.svg",
+      "rating": 4.7,
+      "offers": [
+        {
+          "storeId": "store-001",
+          "storeName": "TechHub India",
+          "price": 24999,
+          "currency": "INR",
+          "availability": "In Stock",
+          "url": "#sample-link-techhub-airpods",
+          "lastUpdated": "2026-08-17T10:00:00Z"
+        },
+        {
+          "storeId": "store-004",
+          "storeName": "GadgetZone",
+          "price": 23999,
+          "currency": "INR",
+          "availability": "In Stock",
+          "url": "#sample-link-gadgetzone-airpods",
+          "lastUpdated": "2026-08-17T10:00:00Z"
+        },
+        {
+          "storeId": "store-005",
+          "storeName": "Prime Electronics",
+          "price": 25999,
+          "currency": "INR",
+          "availability": "Limited Stock",
+          "url": "#sample-link-prime-airpods",
+          "lastUpdated": "2026-08-17T10:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": "product-008",
+      "name": "Apple Watch Series 9",
+      "slug": "apple-watch-series-9",
+      "category": "smart-watches",
+      "description": "Advanced smartwatch with health monitoring, fitness tracking, and seamless iPhone integration. Your perfect health companion.",
+      "image": "images/placeholders/product-placeholder.svg",
+      "rating": 4.6,
+      "offers": [
+        {
+          "storeId": "store-001",
+          "storeName": "TechHub India",
+          "price": 44999,
+          "currency": "INR",
+          "availability": "In Stock",
+          "url": "#sample-link-techhub-watch9",
+          "lastUpdated": "2026-08-17T10:00:00Z"
+        },
+        {
+          "storeId": "store-004",
+          "storeName": "GadgetZone",
+          "price": 42999,
+          "currency": "INR",
+          "availability": "In Stock",
+          "url": "#sample-link-gadgetzone-watch9",
+          "lastUpdated": "2026-08-17T10:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": "product-009",
+      "name": "Samsung Galaxy Watch 6",
+      "slug": "samsung-galaxy-watch-6",
+      "category": "smart-watches",
+      "description": "Samsung's premium smartwatch with advanced health features, LTE connectivity, and beautiful AMOLED display.",
+      "image": "images/placeholders/product-placeholder.svg",
+      "rating": 4.4,
+      "offers": [
+        {
+          "storeId": "store-002",
+          "storeName": "Digital Depot",
+          "price": 32999,
+          "currency": "INR",
+          "availability": "In Stock",
+          "url": "#sample-link-digitaldepot-galaxywatch",
+          "lastUpdated": "2026-08-17T10:00:00Z"
+        },
+        {
+          "storeId": "store-003",
+          "storeName": "ElectroMart",
+          "price": 31999,
+          "currency": "INR",
+          "availability": "In Stock",
+          "url": "#sample-link-electromart-galaxywatch",
+          "lastUpdated": "2026-08-17T10:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": "product-010",
+      "name": "iPad Pro 12.9-inch",
+      "slug": "ipad-pro-12-9-inch",
+      "category": "tablets",
+      "description": "Apple's most powerful tablet with M2 chip, Liquid Retina XDR display, and Apple Pencil support. Ultimate creativity and productivity.",
+      "image": "images/placeholders/product-placeholder.svg",
+      "rating": 4.8,
+      "offers": [
+        {
+          "storeId": "store-001",
+          "storeName": "TechHub India",
+          "price": 129999,
+          "currency": "INR",
+          "availability": "In Stock",
+          "url": "#sample-link-techhub-ipadpro",
+          "lastUpdated": "2026-08-17T10:00:00Z"
+        },
+        {
+          "storeId": "store-004",
+          "storeName": "GadgetZone",
+          "price": 124999,
+          "currency": "INR",
+          "availability": "Limited Stock",
+          "url": "#sample-link-gadgetzone-ipadpro",
+          "lastUpdated": "2026-08-17T10:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": "product-011",
+      "name": "Samsung Galaxy Tab S9 Ultra",
+      "slug": "samsung-galaxy-tab-s9-ultra",
+      "category": "tablets",
+      "description": "Massive 14.6-inch AMOLED tablet with S Pen, Snapdragon 8 Gen 2, and premium build. Perfect for entertainment and productivity.",
+      "image": "images/placeholders/product-placeholder.svg",
+      "rating": 4.5,
+      "offers": [
+        {
+          "storeId": "store-002",
+          "storeName": "Digital Depot",
+          "price": 99999,
+          "currency": "INR",
+          "availability": "In Stock",
+          "url": "#sample-link-digitaldepot-tabs9",
+          "lastUpdated": "2026-08-17T10:00:00Z"
+        },
+        {
+          "storeId": "store-003",
+          "storeName": "ElectroMart",
+          "price": 94999,
+          "currency": "INR",
+          "availability": "In Stock",
+          "url": "#sample-link-electromart-tabs9",
+          "lastUpdated": "2026-08-17T10:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": "product-012",
+      "name": "LG UltraGear 27-inch Gaming Monitor",
+      "slug": "lg-ultragear-27-inch",
+      "category": "monitors",
+      "description": "27-inch QHD gaming monitor with 165Hz refresh rate, 1ms response time, and HDR support. Built for competitive gaming.",
+      "image": "images/placeholders/product-placeholder.svg",
+      "rating": 4.6,
+      "offers": [
+        {
+          "storeId": "store-002",
+          "storeName": "Digital Depot",
+          "price": 24999,
+          "currency": "INR",
+          "availability": "In Stock",
+          "url": "#sample-link-digitaldepot-lgmonitor",
+          "lastUpdated": "2026-08-17T10:00:00Z"
+        },
+        {
+          "storeId": "store-005",
+          "storeName": "Prime Electronics",
+          "price": 26999,
+          "currency": "INR",
+          "availability": "In Stock",
+          "url": "#sample-link-prime-lgmonitor",
+          "lastUpdated": "2026-08-17T10:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": "product-013",
+      "name": "Dell UltraSharp 27-inch 4K Monitor",
+      "slug": "dell-ultrasharp-27-inch-4k",
+      "category": "monitors",
+      "description": "Professional 27-inch 4K monitor with excellent color accuracy, USB-C connectivity, and ergonomic stand. Perfect for creative work.",
+      "image": "images/placeholders/product-placeholder.svg",
+      "rating": 4.7,
+      "offers": [
+        {
+          "storeId": "store-001",
+          "storeName": "TechHub India",
+          "price": 44999,
+          "currency": "INR",
+          "availability": "In Stock",
+          "url": "#sample-link-techhub-dellmonitor",
+          "lastUpdated": "2026-08-17T10:00:00Z"
+        },
+        {
+          "storeId": "store-003",
+          "storeName": "ElectroMart",
+          "price": 42999,
+          "currency": "INR",
+          "availability": "Limited Stock",
+          "url": "#sample-link-electromart-dellmonitor",
+          "lastUpdated": "2026-08-17T10:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": "product-014",
+      "name": "Keychron K2 Mechanical Keyboard",
+      "slug": "keychron-k2-mechanical-keyboard",
+      "category": "keyboards",
+      "description": "Wireless mechanical keyboard with RGB backlighting, hot-swappable switches, and Mac/Windows compatibility. Perfect for typing enthusiasts.",
+      "image": "images/placeholders/product-placeholder.svg",
+      "rating": 4.5,
+      "offers": [
+        {
+          "storeId": "store-002",
+          "storeName": "Digital Depot",
+          "price": 8999,
+          "currency": "INR",
+          "availability": "In Stock",
+          "url": "#sample-link-digitaldepot-keychron",
+          "lastUpdated": "2026-08-17T10:00:00Z"
+        },
+        {
+          "storeId": "store-004",
+          "storeName": "GadgetZone",
+          "price": 8499,
+          "currency": "INR",
+          "availability": "In Stock",
+          "url": "#sample-link-gadgetzone-keychron",
+          "lastUpdated": "2026-08-17T10:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": "product-015",
+      "name": "Logitech MX Keys Mini",
+      "slug": "logitech-mx-keys-mini",
+      "category": "keyboards",
+      "description": "Compact wireless keyboard with Perfect Stroke keys, smart illumination, and multi-device connectivity. Premium typing experience.",
+      "image": "images/placeholders/product-placeholder.svg",
+      "rating": 4.6,
+      "offers": [
+        {
+          "storeId": "store-001",
+          "storeName": "TechHub India",
+          "price": 12999,
+          "currency": "INR",
+          "availability": "In Stock",
+          "url": "#sample-link-techhub-mxkeys",
+          "lastUpdated": "2026-08-17T10:00:00Z"
+        },
+        {
+          "storeId": "store-003",
+          "storeName": "ElectroMart",
+          "price": 11999,
+          "currency": "INR",
+          "availability": "In Stock",
+          "url": "#sample-link-electromart-mxkeys",
+          "lastUpdated": "2026-08-17T10:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": "product-016",
+      "name": "Logitech MX Master 3S",
+      "slug": "logitech-mx-master-3s",
+      "category": "mice",
+      "description": "Advanced wireless mouse with 8K DPI sensor, quiet clicks, and ergonomic design. The ultimate productivity mouse.",
+      "image": "images/placeholders/product-placeholder.svg",
+      "rating": 4.8,
+      "offers": [
+        {
+          "storeId": "store-001",
+          "storeName": "TechHub India",
+          "price": 9999,
+          "currency": "INR",
+          "availability": "In Stock",
+          "url": "#sample-link-techhub-mxmaster",
+          "lastUpdated": "2026-08-17T10:00:00Z"
+        },
+        {
+          "storeId": "store-002",
+          "storeName": "Digital Depot",
+          "price": 9499,
+          "currency": "INR",
+          "availability": "In Stock",
+          "url": "#sample-link-digitaldepot-mxmaster",
+          "lastUpdated": "2026-08-17T10:00:00Z"
+        },
+        {
+          "storeId": "store-004",
+          "storeName": "GadgetZone",
+          "price": 9799,
+          "currency": "INR",
+          "availability": "In Stock",
+          "url": "#sample-link-gadgetzone-mxmaster",
+          "lastUpdated": "2026-08-17T10:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": "product-017",
+      "name": "Razer DeathAdder V3 Pro",
+      "slug": "razer-deathadder-v3-pro",
+      "category": "mice",
+      "description": "Wireless gaming mouse with 30K DPI optical sensor, ergonomic design, and 90-hour battery life. Built for competitive gaming.",
+      "image": "images/placeholders/product-placeholder.svg",
+      "rating": 4.7,
+      "offers": [
+        {
+          "storeId": "store-002",
+          "storeName": "Digital Depot",
+          "price": 11999,
+          "currency": "INR",
+          "availability": "In Stock",
+          "url": "#sample-link-digitaldepot-razer",
+          "lastUpdated": "2026-08-17T10:00:00Z"
+        },
+        {
+          "storeId": "store-005",
+          "storeName": "Prime Electronics",
+          "price": 12999,
+          "currency": "INR",
+          "availability": "Limited Stock",
+          "url": "#sample-link-prime-razer",
+          "lastUpdated": "2026-08-17T10:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": "product-018",
+      "name": "Google Pixel 8 Pro",
+      "slug": "google-pixel-8-pro",
+      "category": "smartphones",
+      "description": "Google's flagship with Tensor G3 chip, advanced AI features, and exceptional camera system. Pure Android experience.",
+      "image": "images/placeholders/product-placeholder.svg",
+      "rating": 4.5,
+      "offers": [
+        {
+          "storeId": "store-003",
+          "storeName": "ElectroMart",
+          "price": 106999,
+          "currency": "INR",
+          "availability": "In Stock",
+          "url": "#sample-link-electromart-pixel8",
+          "lastUpdated": "2026-08-17T10:00:00Z"
+        },
+        {
+          "storeId": "store-004",
+          "storeName": "GadgetZone",
+          "price": 109999,
+          "currency": "INR",
+          "availability": "In Stock",
+          "url": "#sample-link-gadgetzone-pixel8",
+          "lastUpdated": "2026-08-17T10:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": "product-019",
+      "name": "ASUS ROG Zephyrus G14",
+      "slug": "asus-rog-zephyrus-g14",
+      "category": "laptops",
+      "description": "Powerful gaming laptop with AMD Ryzen 9, RTX 4060, and 14-inch QHD display. Portable gaming performance.",
+      "image": "images/placeholders/product-placeholder.svg",
+      "rating": 4.6,
+      "offers": [
+        {
+          "storeId": "store-002",
+          "storeName": "Digital Depot",
+          "price": 119999,
+          "currency": "INR",
+          "availability": "In Stock",
+          "url": "#sample-link-digitaldepot-rog",
+          "lastUpdated": "2026-08-17T10:00:00Z"
+        },
+        {
+          "storeId": "store-005",
+          "storeName": "Prime Electronics",
+          "price": 124999,
+          "currency": "INR",
+          "availability": "In Stock",
+          "url": "#sample-link-prime-rog",
+          "lastUpdated": "2026-08-17T10:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": "product-020",
+      "name": "Bose QuietComfort Ultra",
+      "slug": "bose-quietcomfort-ultra",
+      "category": "headphones",
+      "description": "Premium noise-canceling headphones with exceptional comfort, immersive audio, and advanced spatial audio technology.",
+      "image": "images/placeholders/product-placeholder.svg",
+      "rating": 4.7,
+      "offers": [
+        {
+          "storeId": "store-001",
+          "storeName": "TechHub India",
+          "price": 32999,
+          "currency": "INR",
+          "availability": "In Stock",
+          "url": "#sample-link-techhub-bose",
+          "lastUpdated": "2026-08-17T10:00:00Z"
+        },
+        {
+          "storeId": "store-003",
+          "storeName": "ElectroMart",
+          "price": 31999,
+          "currency": "INR",
+          "availability": "Limited Stock",
+          "url": "#sample-link-electromart-bose",
+          "lastUpdated": "2026-08-17T10:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": "product-021",
+      "name": "Garmin Fenix 7",
+      "slug": "garmin-fenix-7",
+      "category": "smart-watches",
+      "description": "Rugged multisport GPS smartwatch with advanced health monitoring, solar charging, and unmatched battery life. Built for adventure.",
+      "image": "images/placeholders/product-placeholder.svg",
+      "rating": 4.6,
+      "offers": [
+        {
+          "storeId": "store-002",
+          "storeName": "Digital Depot",
+          "price": 69999,
+          "currency": "INR",
+          "availability": "In Stock",
+          "url": "#sample-link-digitaldepot-garmin",
+          "lastUpdated": "2026-08-17T10:00:00Z"
+        },
+        {
+          "storeId": "store-004",
+          "storeName": "GadgetZone",
+          "price": 67999,
+          "currency": "INR",
+          "availability": "In Stock",
+          "url": "#sample-link-gadgetzone-garmin",
+          "lastUpdated": "2026-08-17T10:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": "product-022",
+      "name": "Microsoft Surface Pro 9",
+      "slug": "microsoft-surface-pro-9",
+      "category": "tablets",
+      "description": "Versatile 2-in-1 tablet with Intel Core i7, Surface Pen support, and detachable keyboard. Perfect for productivity on the go.",
+      "image": "images/placeholders/product-placeholder.svg",
+      "rating": 4.5,
+      "offers": [
+        {
+          "storeId": "store-001",
+          "storeName": "TechHub India",
+          "price": 119999,
+          "currency": "INR",
+          "availability": "In Stock",
+          "url": "#sample-link-techhub-surface",
+          "lastUpdated": "2026-08-17T10:00:00Z"
+        },
+        {
+          "storeId": "store-003",
+          "storeName": "ElectroMart",
+          "price": 114999,
+          "currency": "INR",
+          "availability": "Limited Stock",
+          "url": "#sample-link-electromart-surface",
+          "lastUpdated": "2026-08-17T10:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": "product-023",
+      "name": "Samsung Odyssey G9",
+      "slug": "samsung-odyssey-g9",
+      "category": "monitors",
+      "description": "Massive 49-inch curved gaming monitor with 240Hz refresh rate, 1ms response time, and stunning 5120x1440 resolution. Ultimate gaming immersion.",
+      "image": "images/placeholders/product-placeholder.svg",
+      "rating": 4.7,
+      "offers": [
+        {
+          "storeId": "store-002",
+          "storeName": "Digital Depot",
+          "price": 89999,
+          "currency": "INR",
+          "availability": "In Stock",
+          "url": "#sample-link-digitaldepot-odyssey",
+          "lastUpdated": "2026-08-17T10:00:00Z"
+        },
+        {
+          "storeId": "store-005",
+          "storeName": "Prime Electronics",
+          "price": 94999,
+          "currency": "INR",
+          "availability": "Limited Stock",
+          "url": "#sample-link-prime-odyssey",
+          "lastUpdated": "2026-08-17T10:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": "product-024",
+      "name": "Corsair K70 RGB TKL",
+      "slug": "corsair-k70-rgb-tkl",
+      "category": "keyboards",
+      "description": "Compact mechanical gaming keyboard with Cherry MX switches, per-key RGB, and aluminum frame. Built for gamers.",
+      "image": "images/placeholders/product-placeholder.svg",
+      "rating": 4.5,
+      "offers": [
+        {
+          "storeId": "store-002",
+          "storeName": "Digital Depot",
+          "price": 14999,
+          "currency": "INR",
+          "availability": "In Stock",
+          "url": "#sample-link-digitaldepot-corsair",
+          "lastUpdated": "2026-08-17T10:00:00Z"
+        },
+        {
+          "storeId": "store-004",
+          "storeName": "GadgetZone",
+          "price": 13999,
+          "currency": "INR",
+          "availability": "In Stock",
+          "url": "#sample-link-gadgetzone-corsair",
+          "lastUpdated": "2026-08-17T10:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": "product-025",
+      "name": "SteelSeries Prime Wireless",
+      "slug": "steelseries-prime-wireless",
+      "category": "mice",
+      "description": "Premium wireless gaming mouse with lightweight design, TrueMove Air sensor, and 100-hour battery life. Precision gaming.",
+      "image": "images/placeholders/product-placeholder.svg",
+      "rating": 4.6,
+      "offers": [
+        {
+          "storeId": "store-003",
+          "storeName": "ElectroMart",
+          "price": 13999,
+          "currency": "INR",
+          "availability": "In Stock",
+          "url": "#sample-link-electromart-steelseries",
+          "lastUpdated": "2026-08-17T10:00:00Z"
+        },
+        {
+          "storeId": "store-005",
+          "storeName": "Prime Electronics",
+          "price": 14999,
+          "currency": "INR",
+          "availability": "In Stock",
+          "url": "#sample-link-prime-steelseries",
+          "lastUpdated": "2026-08-17T10:00:00Z"
+        }
+      ]
+    }
+  ]
+}
