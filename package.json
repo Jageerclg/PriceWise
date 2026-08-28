@@ -1,0 +1,17 @@
+{
+  "name": "pricewise",
+  "version": "1.0.0",
+  "description": "PriceWise backend-ready product comparison application",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "test": "node --test tests/**/*.test.js"
+  },
+  "keywords": [
+    "pricewise",
+    "ecommerce",
+    "comparison"
+  ],
+  "license": "MIT",
+  "private": true
+}

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse and compare products across multiple stores on PriceWise">
+    <title>Products - PriceWise</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <h1>PriceWise</h1>
+                </a>
+                <nav class="main-nav" role="navigation" aria-label="Main navigation">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="products.html" class="nav-link active">Products</a></li>
+                        <li><a href="comparison.html" class="nav-link">Compare</a></li>
+                        <li><a href="about.html" class="nav-link">About</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="products-section">
+            <div class="container">
+                <h1 class="page-title">Browse Products</h1>
+                
+                <div class="search-area">
+                    <form action="products.html" method="get" class="search-form" role="search">
+                        <label for="search-input" class="visually-hidden">Search products</label>
+                        <input 
+                            type="text" 
+                            id="search-input" 
+                            name="search" 
+                            class="search-input" 
+                            placeholder="Search products..."
+                            aria-label="Search products"
+                        >
+                        <button type="submit" class="search-button">Search</button>
+                    </form>
+                    <div id="search-status" class="search-status" hidden aria-live="polite" role="status"></div>
+                </div>
+
+                <aside class="filters-sidebar">
+                    <div class="filter-group">
+                        <h2 class="filter-title">Filters</h2>
+                        
+                        <div class="filter-section">
+                            <label for="category-filter" class="filter-label">Category</label>
+                            <select id="category-filter" name="category" class="filter-select" aria-label="Filter by category">
+                                <option value="">All Categories</option>
+                                <option value="electronics">Electronics</option>
+                                <option value="clothing">Clothing</option>
+                                <option value="home">Home & Garden</option>
+                                <option value="sports">Sports</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-section">
+                            <label for="min-price-filter" class="filter-label">Minimum Price</label>
+                            <input 
+                                type="number" 
+                                id="min-price-filter" 
+                                name="minPrice" 
+                                class="filter-input" 
+                                placeholder="Min price"
+                                min="0"
+                                step="0.01"
+                                aria-label="Minimum price filter"
+                            >
+                        </div>
+
+                        <div class="filter-section">
+                            <label for="max-price-filter" class="filter-label">Maximum Price</label>
+                            <input 
+                                type="number" 
+                                id="max-price-filter" 
+                                name="maxPrice" 
+                                class="filter-input" 
+                                placeholder="Max price"
+                                min="0"
+                                step="0.01"
+                                aria-label="Maximum price filter"
+                            >
+                        </div>
+
+                        <div class="filter-section">
+                            <label for="store-filter" class="filter-label">Store</label>
+                            <select id="store-filter" name="store" class="filter-select" aria-label="Filter by store">
+                                <option value="">All Stores</option>
+                                <option value="store1">Store 1</option>
+                                <option value="store2">Store 2</option>
+                                <option value="store3">Store 3</option>
+                            </select>
+                        </div>
+
+                        <button type="button" class="reset-filters-button" id="reset-filters">Reset Filters</button>
+                    </div>
+                </aside>
+
+                <div class="products-content">
+                    <div class="sorting-area">
+                        <div class="results-info">
+                            <span id="results-count" class="results-count">Showing 0 products</span>
+                        </div>
+                        <div class="sort-controls">
+                            <label for="sort-select" class="sort-label">Sort by:</label>
+                            <select id="sort-select" name="sort" class="sort-select" aria-label="Sort products">
+                                <option value="">Default</option>
+                                <option value="price_asc">Price: Low to High</option>
+                                <option value="price_desc">Price: High to Low</option>
+                                <option value="name_asc">Name: A to Z</option>
+                                <option value="name_desc">Name: Z to A</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="product-results" id="product-results">
+                    </div>
+
+                    <div class="no-results" id="no-results" hidden>
+                        <h2>No Products Found</h2>
+                        <p>Try adjusting your filters or search terms to find what you're looking for.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>PriceWise</h3>
+                    <p>Your smart product price comparison platform</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <nav aria-label="Footer navigation">
+                        <ul class="footer-nav">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="products.html">Products</a></li>
+                            <li><a href="comparison.html">Compare</a></li>
+                            <li><a href="about.html">About</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="footer-section">
+                    <h4>Information</h4>
+                    <p>Sample prices are for demonstration purposes only</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 PriceWise. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/utils.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/product-data-service.js"></script>
+    <script src="js/product-share-url.js"></script>
+    <script src="js/product-url.js"></script>
+    <script src="js/filters.js"></script>
+    <script src="js/sorting.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
