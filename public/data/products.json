@@ -1,0 +1,197 @@
+{
+  "products": [
+    {
+      "id": "product-001",
+      "name": "Samsung Galaxy S24 Ultra",
+      "slug": "galaxy-s24-ultra",
+      "brand": "Samsung",
+      "reviewCount": 1284,
+      "availability": "In Stock",
+      "currency": "INR",
+      "mrp": 149999,
+      "discountPercent": 15,
+      "category": "smartphones",
+      "description": "Premium flagship smartphone with advanced AI features, 200MP camera, and S Pen included. Perfect for professionals and content creators.",
+      "image": "images/products/galaxy-s24-ultra.jpg",
+      "rating": 4.7,
+      "offers": [
+        {
+          "storeId": "store-001",
+          "storeName": "TechHub India",
+          "price": 129999,
+          "currency": "INR",
+          "availability": "In Stock",
+          "url": "#sample-link-techhub-s24",
+          "lastUpdated": "2026-08-17T10:00:00Z"
+        },
+        {
+          "storeId": "store-002",
+          "storeName": "Digital Depot",
+          "price": 134999,
+          "currency": "INR",
+          "availability": "In Stock",
+          "url": "#sample-link-digitaldepot-s24",
+          "lastUpdated": "2026-08-17T10:00:00Z"
+        },
+        {
+          "storeId": "store-003",
+          "storeName": "ElectroMart",
+          "price": 127999,
+          "currency": "INR",
+          "availability": "Limited Stock",
+          "url": "#sample-link-electromart-s24",
+          "lastUpdated": "2026-08-17T10:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": "product-002",
+      "name": "Apple iPhone 15 Pro Max",
+      "slug": "iphone-15-pro-max",
+      "brand": "Apple",
+      "reviewCount": 2147,
+      "availability": "In Stock",
+      "currency": "INR",
+      "mrp": 174900,
+      "discountPercent": 10,
+      "category": "smartphones",
+      "description": "Apple's most advanced iPhone with titanium design, A17 Pro chip, and improved camera system. The ultimate smartphone experience.",
+      "image": "images/products/iphone-15-pro-max.jpg",
+      "rating": 4.8,
+      "offers": [
+        {
+          "storeId": "store-001",
+          "storeName": "TechHub India",
+          "price": 159999,
+          "currency": "INR",
+          "availability": "In Stock",
+          "url": "#sample-link-techhub-iphone15",
+          "lastUpdated": "2026-08-17T10:00:00Z"
+        },
+        {
+          "storeId": "store-004",
+          "storeName": "GadgetZone",
+          "price": 156999,
+          "currency": "INR",
+          "availability": "In Stock",
+          "url": "#sample-link-gadgetzone-iphone15",
+          "lastUpdated": "2026-08-17T10:00:00Z"
+        },
+        {
+          "storeId": "store-005",
+          "storeName": "Prime Electronics",
+          "price": 162999,
+          "currency": "INR",
+          "availability": "Pre-order",
+          "url": "#sample-link-prime-iphone15",
+          "lastUpdated": "2026-08-17T10:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": "product-003",
+      "name": "OnePlus 12",
+      "slug": "oneplus-12",
+      "brand": "OnePlus",
+      "reviewCount": 986,
+      "availability": "In Stock",
+      "currency": "INR",
+      "mrp": 69999,
+      "discountPercent": 10,
+      "category": "smartphones",
+      "description": "Flagship smartphone with Hasselblad camera, Snapdragon 8 Gen 3, and fast charging. Excellent performance and value.",
+      "image": "images/products/oneplus-12.jpg",
+      "rating": 4.5,
+      "offers": [
+        {
+          "storeId": "store-002",
+          "storeName": "Digital Depot",
+          "price": 64999,
+          "currency": "INR",
+          "availability": "In Stock",
+          "url": "#sample-link-digitaldepot-oneplus12",
+          "lastUpdated": "2026-08-17T10:00:00Z"
+        },
+        {
+          "storeId": "store-003",
+          "storeName": "ElectroMart",
+          "price": 62999,
+          "currency": "INR",
+          "availability": "In Stock",
+          "url": "#sample-link-electromart-oneplus12",
+          "lastUpdated": "2026-08-17T10:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": "product-004",
+      "name": "Apple MacBook Air M3",
+      "slug": "macbook-air-m3",
+      "brand": "Apple",
+      "reviewCount": 731,
+      "availability": "In Stock",
+      "currency": "INR",
+      "mrp": 114900,
+      "discountPercent": 8,
+      "category": "laptops",
+      "description": "Lightweight Apple laptop with M3 chip, Liquid Retina display, and all-day battery life for everyday work and study.",
+      "image": "images/products/macbook-air-m3.jpg",
+      "rating": 4.9,
+      "offers": [
+        {
+          "storeId": "store-001",
+          "storeName": "TechHub India",
+          "price": 109999,
+          "currency": "INR",
+          "availability": "In Stock",
+          "url": "#sample-link-techhub-macbook",
+          "lastUpdated": "2026-08-17T10:00:00Z"
+        },
+        {
+          "storeId": "store-004",
+          "storeName": "GadgetZone",
+          "price": 106999,
+          "currency": "INR",
+          "availability": "Limited Stock",
+          "url": "#sample-link-gadgetzone-macbook",
+          "lastUpdated": "2026-08-17T10:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": "product-005",
+      "name": "Sony WH-1000XM5",
+      "slug": "sony-wh-1000xm5",
+      "brand": "Sony",
+      "reviewCount": 1678,
+      "availability": "In Stock",
+      "currency": "INR",
+      "mrp": 34990,
+      "discountPercent": 20,
+      "category": "headphones",
+      "description": "Industry-leading noise canceling headphones with exceptional sound quality, 30-hour battery life, and comfortable design.",
+      "image": "images/products/sony-wh-1000xm5.jpg",
+      "rating": 4.8,
+      "offers": [
+        {
+          "storeId": "store-001",
+          "storeName": "TechHub India",
+          "price": 29999,
+          "currency": "INR",
+          "availability": "In Stock",
+          "url": "#sample-link-techhub-sony",
+          "lastUpdated": "2026-08-17T10:00:00Z"
+        },
+        {
+          "storeId": "store-002",
+          "storeName": "Digital Depot",
+          "price": 27999,
+          "currency": "INR",
+          "availability": "In Stock",
+          "url": "#sample-link-digitaldepot-sony",
+          "lastUpdated": "2026-08-17T10:00:00Z"
+        }
+      ]
+    }
+  ]
+}

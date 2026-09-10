@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Create a new PriceWise account">
+    <title>Sign Up - PriceWise</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <h1>PriceWise</h1>
+                </a>
+                <nav class="main-nav" role="navigation" aria-label="Main navigation">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="products.html" class="nav-link">Products</a></li>
+                        <li><a href="comparison.html" class="nav-link">Compare</a></li>
+                        <li><a href="about.html" class="nav-link">About</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="auth-page">
+            <div class="container">
+                <div class="auth-card">
+                    <div class="auth-card-header">
+                        <h1 class="auth-title">Create Account</h1>
+                        <p class="auth-subtitle">Join PriceWise to track your favorite products</p>
+                    </div>
+
+                    <form class="auth-form" id="signup-form" novalidate>
+                        <!-- Full Name Field -->
+                        <div class="auth-field">
+                            <label for="fullname" class="auth-label">Full Name</label>
+                            <input
+                                type="text"
+                                id="fullname"
+                                name="fullname"
+                                class="auth-input"
+                                placeholder="Enter your full name"
+                                required
+                                aria-label="Full Name"
+                                aria-describedby="fullname-error"
+                            >
+                            <div class="auth-error" id="fullname-error" role="alert"></div>
+                        </div>
+
+                        <!-- Email Field -->
+                        <div class="auth-field">
+                            <label for="email" class="auth-label">Email Address</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                class="auth-input"
+                                placeholder="Enter your email"
+                                required
+                                aria-label="Email Address"
+                                aria-describedby="email-error"
+                            >
+                            <div class="auth-error" id="email-error" role="alert"></div>
+                        </div>
+
+                        <!-- Password Field -->
+                        <div class="auth-field">
+                            <label for="password" class="auth-label">Password</label>
+                            <div class="auth-password-wrapper">
+                                <input
+                                    type="password"
+                                    id="password"
+                                    name="password"
+                                    class="auth-input"
+                                    placeholder="At least 8 characters"
+                                    required
+                                    aria-label="Password"
+                                    aria-describedby="password-error"
+                                >
+                                <button
+                                    type="button"
+                                    class="auth-password-toggle"
+                                    id="password-toggle"
+                                    aria-label="Show password"
+                                    title="Show/hide password"
+                                >
+                                    <span class="toggle-icon">👁️</span>
+                                </button>
+                            </div>
+                            <div class="auth-error" id="password-error" role="alert"></div>
+                        </div>
+
+                        <!-- Confirm Password Field -->
+                        <div class="auth-field">
+                            <label for="confirm-password" class="auth-label">Confirm Password</label>
+                            <div class="auth-password-wrapper">
+                                <input
+                                    type="password"
+                                    id="confirm-password"
+                                    name="confirm-password"
+                                    class="auth-input"
+                                    placeholder="Re-enter your password"
+                                    required
+                                    aria-label="Confirm Password"
+                                    aria-describedby="confirm-password-error"
+                                >
+                                <button
+                                    type="button"
+                                    class="auth-password-toggle"
+                                    id="confirm-password-toggle"
+                                    aria-label="Show confirm password"
+                                    title="Show/hide password"
+                                >
+                                    <span class="toggle-icon">👁️</span>
+                                </button>
+                            </div>
+                            <div class="auth-error" id="confirm-password-error" role="alert"></div>
+                        </div>
+
+                        <!-- Message Area -->
+                        <div class="auth-message" id="auth-message" role="alert"></div>
+
+                        <!-- Submit Button -->
+                        <div class="auth-actions">
+                            <button type="submit" class="auth-button primary-button" id="signup-button">
+                                Create Account
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Login Link -->
+                    <div class="auth-card-footer">
+                        <p class="auth-footer-text">
+                            Already have an account?
+                            <a href="login.html" class="auth-footer-link">Login</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 PriceWise. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Load required modules -->
+    <script src="js/utils.js"></script>
+    <script src="js/auth.js"></script>
+
+    <script>
+        // Signup page specific logic
+        const SignupPage = (function() {
+            'use strict';
+
+            const form = Utils.selectElement('#signup-form');
+            const fullnameInput = Utils.selectElement('#fullname');
+            const emailInput = Utils.selectElement('#email');
+            const passwordInput = Utils.selectElement('#password');
+            const confirmPasswordInput = Utils.selectElement('#confirm-password');
+            const passwordToggle = Utils.selectElement('#password-toggle');
+            const confirmPasswordToggle = Utils.selectElement('#confirm-password-toggle');
+            const authMessage = Utils.selectElement('#auth-message');
+            const signupButton = Utils.selectElement('#signup-button');
+
+            /**
+             * Initialize signup page
+             */
+            function initialize() {
+                if (Auth.isLoggedIn()) {
+                    // Redirect already logged-in users to home
+                    window.location.href = 'index.html';
+                    return;
+                }
+
+                setupEventListeners();
+                console.log('Signup page initialized');
+            }
+
+            /**
+             * Set up event listeners
+             */
+            function setupEventListeners() {
+                if (form) {
+                    Utils.addEventListener(form, 'submit', handleFormSubmit);
+                }
+
+                // Password visibility toggles
+                if (passwordToggle) {
+                    Utils.addEventListener(passwordToggle, 'click', (e) => {
+                        e.preventDefault();
+                        togglePasswordVisibility(passwordInput, passwordToggle);
+                    });
+                }
+
+                if (confirmPasswordToggle) {
+                    Utils.addEventListener(confirmPasswordToggle, 'click', (e) => {
+                        e.preventDefault();
+                        togglePasswordVisibility(confirmPasswordInput, confirmPasswordToggle);
+                    });
+                }
+
+                // Real-time validation
+                if (fullnameInput) {
+                    Utils.addEventListener(fullnameInput, 'blur', () => {
+                        validateField('fullname');
+                    });
+                }
+
+                if (emailInput) {
+                    Utils.addEventListener(emailInput, 'blur', () => {
+                        validateField('email');
+                    });
+                }
+
+                if (passwordInput) {
+                    Utils.addEventListener(passwordInput, 'blur', () => {
+                        validateField('password');
+                    });
+                }
+
+                if (confirmPasswordInput) {
+                    Utils.addEventListener(confirmPasswordInput, 'blur', () => {
+                        validateField('confirm-password');
+                    });
+                }
+            }
+
+            /**
+             * Toggle password visibility
+             */
+            function togglePasswordVisibility(inputField, toggleButton) {
+                if (!inputField || !toggleButton) return;
+
+                const isPassword = inputField.type === 'password';
+                inputField.type = isPassword ? 'text' : 'password';
+
+                // Update button label
+                const label = isPassword ? 'Hide password' : 'Show password';
+                toggleButton.setAttribute('aria-label', label);
+                toggleButton.setAttribute('title', label);
+            }
+
+            /**
+             * Validate a single field
+             */
+            function validateField(fieldName) {
+                const errorElement = Utils.selectElement(`#${fieldName}-error`);
+                if (!errorElement) return true;
+
+                clearError(fieldName);
+
+                switch (fieldName) {
+                    case 'fullname': {
+                        const validation = Auth.validateName(fullnameInput.value);
+                        if (!validation.isValid) {
+                            setError(fieldName, validation.message);
+                            return false;
+                        }
+                        return true;
+                    }
+                    case 'email': {
+                        if (!emailInput.value.trim()) {
+                            setError(fieldName, 'Please enter your email address.');
+                            return false;
+                        }
+                        if (!Auth.validateEmail(emailInput.value.toLowerCase())) {
+                            setError(fieldName, 'Please enter a valid email address.');
+                            return false;
+                        }
+                        // Duplicate accounts are detected by the server on submit (HTTP 409).
+                        return true;
+                    }
+                    case 'password': {
+                        const validation = Auth.validatePassword(passwordInput.value);
+                        if (!validation.isValid) {
+                            setError(fieldName, validation.message);
+                            return false;
+                        }
+                        // Also validate confirm password match if it has a value
+                        if (confirmPasswordInput.value) {
+                            validateField('confirm-password');
+                        }
+                        return true;
+                    }
+                    case 'confirm-password': {
+                        if (!confirmPasswordInput.value) {
+                            setError(fieldName, 'Please confirm your password.');
+                            return false;
+                        }
+                        if (passwordInput.value !== confirmPasswordInput.value) {
+                            setError(fieldName, 'Passwords do not match.');
+                            return false;
+                        }
+                        return true;
+                    }
+                }
+                return true;
+            }
+
+            /**
+             * Validate all fields
+             */
+            function validateAllFields() {
+                return (
+                    validateField('fullname') &&
+                    validateField('email') &&
+                    validateField('password') &&
+                    validateField('confirm-password')
+                );
+            }
+
+            /**
+             * Set error message for field
+             */
+            function setError(fieldName, message) {
+                const errorElement = Utils.selectElement(`#${fieldName}-error`);
+                if (errorElement) {
+                    errorElement.textContent = message;
+                    errorElement.classList.add('visible');
+
+                    // Add error class to input
+                    const input = Utils.selectElement(`#${fieldName}`);
+                    if (input) {
+                        input.classList.add('error');
+                    }
+                }
+            }
+
+            /**
+             * Clear error for field
+             */
+            function clearError(fieldName) {
+                const errorElement = Utils.selectElement(`#${fieldName}-error`);
+                if (errorElement) {
+                    errorElement.textContent = '';
+                    errorElement.classList.remove('visible');
+
+                    // Remove error class from input
+                    const input = Utils.selectElement(`#${fieldName}`);
+                    if (input) {
+                        input.classList.remove('error');
+                    }
+                }
+            }
+
+            /**
+             * Show success message
+             */
+            function showSuccessMessage(message) {
+                if (authMessage) {
+                    authMessage.textContent = message;
+                    authMessage.classList.remove('error');
+                    authMessage.classList.add('success', 'visible');
+                }
+            }
+
+            /**
+             * Show error message
+             */
+            function showErrorMessage(message) {
+                if (authMessage) {
+                    authMessage.textContent = message;
+                    authMessage.classList.remove('success');
+                    authMessage.classList.add('error', 'visible');
+                }
+            }
+
+            /**
+             * Handle form submission
+             */
+            async function handleFormSubmit(e) {
+                e.preventDefault();
+
+                // Clear previous messages
+                if (authMessage) {
+                    authMessage.classList.remove('visible', 'success', 'error');
+                }
+
+                // Validate all fields
+                if (!validateAllFields()) {
+                    showErrorMessage('Please correct the errors above.');
+                    return;
+                }
+
+                // Disable submit button
+                if (signupButton) {
+                    signupButton.disabled = true;
+                    signupButton.textContent = 'Creating Account...';
+                }
+
+                // Attempt signup via the MongoDB-backed auth API
+                const result = await Auth.signup(
+                    fullnameInput.value,
+                    emailInput.value,
+                    passwordInput.value
+                );
+
+                if (result.success) {
+                    showSuccessMessage(result.message);
+                    form.reset();
+
+                    // Clear input error states
+                    ['fullname', 'email', 'password', 'confirm-password'].forEach(field => {
+                        clearError(field);
+                    });
+
+                    // Redirect to login after success
+                    setTimeout(() => {
+                        window.location.href = 'login.html';
+                    }, 1500);
+                } else {
+                    showErrorMessage(result.message);
+
+                    // Re-enable submit button
+                    if (signupButton) {
+                        signupButton.disabled = false;
+                        signupButton.textContent = 'Create Account';
+                    }
+                }
+            }
+
+            return {
+                initialize
+            };
+        })();
+
+        // Initialize when DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', SignupPage.initialize);
+        } else {
+            SignupPage.initialize();
+        }
+    </script>
+</body>
+</html>

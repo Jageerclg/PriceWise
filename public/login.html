@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Login to your PriceWise account">
+    <title>Login - PriceWise</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <h1>PriceWise</h1>
+                </a>
+                <nav class="main-nav" role="navigation" aria-label="Main navigation">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="products.html" class="nav-link">Products</a></li>
+                        <li><a href="comparison.html" class="nav-link">Compare</a></li>
+                        <li><a href="about.html" class="nav-link">About</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="auth-page">
+            <div class="container">
+                <div class="auth-card">
+                    <div class="auth-card-header">
+                        <h1 class="auth-title">Login</h1>
+                        <p class="auth-subtitle">Welcome back to PriceWise</p>
+                    </div>
+
+                    <form class="auth-form" id="login-form" novalidate>
+                        <!-- Email Field -->
+                        <div class="auth-field">
+                            <label for="email" class="auth-label">Email Address</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                class="auth-input"
+                                placeholder="Enter your email"
+                                required
+                                aria-label="Email Address"
+                                aria-describedby="email-error"
+                            >
+                            <div class="auth-error" id="email-error" role="alert"></div>
+                        </div>
+
+                        <!-- Password Field -->
+                        <div class="auth-field">
+                            <label for="password" class="auth-label">Password</label>
+                            <div class="auth-password-wrapper">
+                                <input
+                                    type="password"
+                                    id="password"
+                                    name="password"
+                                    class="auth-input"
+                                    placeholder="Enter your password"
+                                    required
+                                    aria-label="Password"
+                                    aria-describedby="password-error"
+                                >
+                                <button
+                                    type="button"
+                                    class="auth-password-toggle"
+                                    id="password-toggle"
+                                    aria-label="Show password"
+                                    title="Show/hide password"
+                                >
+                                    <span class="toggle-icon">👁️</span>
+                                </button>
+                            </div>
+                            <div class="auth-error" id="password-error" role="alert"></div>
+                        </div>
+
+                        <!-- Message Area -->
+                        <div class="auth-message" id="auth-message" role="alert"></div>
+
+                        <!-- Submit Button -->
+                        <div class="auth-actions">
+                            <button type="submit" class="auth-button primary-button" id="login-button">
+                                Login
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Signup Link -->
+                    <div class="auth-card-footer">
+                        <p class="auth-footer-text">
+                            Don't have an account?
+                            <a href="signup.html" class="auth-footer-link">Sign Up</a>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Demo Credentials Hint -->
+                <div class="auth-demo-info">
+                    <p><strong>Demo Information:</strong> This is a demonstration authentication system for learning purposes. No real accounts are validated.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 PriceWise. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Load required modules -->
+    <script src="js/utils.js"></script>
+    <script src="js/auth.js"></script>
+
+    <script>
+        // Login page specific logic
+        const LoginPage = (function() {
+            'use strict';
+
+            const form = Utils.selectElement('#login-form');
+            const emailInput = Utils.selectElement('#email');
+            const passwordInput = Utils.selectElement('#password');
+            const passwordToggle = Utils.selectElement('#password-toggle');
+            const authMessage = Utils.selectElement('#auth-message');
+            const loginButton = Utils.selectElement('#login-button');
+
+            /**
+             * Initialize login page
+             */
+            function initialize() {
+                if (Auth.isLoggedIn()) {
+                    // Redirect already logged-in users to home
+                    window.location.href = 'index.html';
+                    return;
+                }
+
+                setupEventListeners();
+                console.log('Login page initialized');
+            }
+
+            /**
+             * Set up event listeners
+             */
+            function setupEventListeners() {
+                if (form) {
+                    Utils.addEventListener(form, 'submit', handleFormSubmit);
+                }
+
+                // Password visibility toggle
+                if (passwordToggle) {
+                    Utils.addEventListener(passwordToggle, 'click', (e) => {
+                        e.preventDefault();
+                        togglePasswordVisibility();
+                    });
+                }
+
+                // Real-time validation
+                if (emailInput) {
+                    Utils.addEventListener(emailInput, 'blur', () => {
+                        validateField('email');
+                    });
+                }
+
+                if (passwordInput) {
+                    Utils.addEventListener(passwordInput, 'blur', () => {
+                        validateField('password');
+                    });
+                }
+            }
+
+            /**
+             * Toggle password visibility
+             */
+            function togglePasswordVisibility() {
+                if (!passwordInput || !passwordToggle) return;
+
+                const isPassword = passwordInput.type === 'password';
+                passwordInput.type = isPassword ? 'text' : 'password';
+
+                // Update button label
+                const label = isPassword ? 'Hide password' : 'Show password';
+                passwordToggle.setAttribute('aria-label', label);
+                passwordToggle.setAttribute('title', label);
+            }
+
+            /**
+             * Validate a single field
+             */
+            function validateField(fieldName) {
+                const errorElement = Utils.selectElement(`#${fieldName}-error`);
+                if (!errorElement) return true;
+
+                clearError(fieldName);
+
+                if (fieldName === 'email') {
+                    if (!emailInput.value.trim()) {
+                        setError(fieldName, 'Please enter your email address.');
+                        return false;
+                    }
+                    if (!Auth.validateEmail(emailInput.value.toLowerCase())) {
+                        setError(fieldName, 'Please enter a valid email address.');
+                        return false;
+                    }
+                    return true;
+                }
+
+                if (fieldName === 'password') {
+                    if (!passwordInput.value) {
+                        setError(fieldName, 'Please enter your password.');
+                        return false;
+                    }
+                    return true;
+                }
+
+                return true;
+            }
+
+            /**
+             * Validate all fields
+             */
+            function validateAllFields() {
+                return validateField('email') && validateField('password');
+            }
+
+            /**
+             * Set error message for field
+             */
+            function setError(fieldName, message) {
+                const errorElement = Utils.selectElement(`#${fieldName}-error`);
+                if (errorElement) {
+                    errorElement.textContent = message;
+                    errorElement.classList.add('visible');
+
+                    // Add error class to input
+                    const input = Utils.selectElement(`#${fieldName}`);
+                    if (input) {
+                        input.classList.add('error');
+                    }
+                }
+            }
+
+            /**
+             * Clear error for field
+             */
+            function clearError(fieldName) {
+                const errorElement = Utils.selectElement(`#${fieldName}-error`);
+                if (errorElement) {
+                    errorElement.textContent = '';
+                    errorElement.classList.remove('visible');
+
+                    // Remove error class from input
+                    const input = Utils.selectElement(`#${fieldName}`);
+                    if (input) {
+                        input.classList.remove('error');
+                    }
+                }
+            }
+
+            /**
+             * Show success message
+             */
+            function showSuccessMessage(message) {
+                if (authMessage) {
+                    authMessage.textContent = message;
+                    authMessage.classList.remove('error');
+                    authMessage.classList.add('success', 'visible');
+                }
+            }
+
+            /**
+             * Show error message
+             */
+            function showErrorMessage(message) {
+                if (authMessage) {
+                    authMessage.textContent = message;
+                    authMessage.classList.remove('success');
+                    authMessage.classList.add('error', 'visible');
+                }
+            }
+
+            /**
+             * Handle form submission
+             */
+            async function handleFormSubmit(e) {
+                e.preventDefault();
+
+                // Clear previous messages
+                if (authMessage) {
+                    authMessage.classList.remove('visible', 'success', 'error');
+                }
+
+                // Validate fields
+                if (!validateAllFields()) {
+                    showErrorMessage('Please correct the errors above.');
+                    return;
+                }
+
+                // Disable submit button
+                if (loginButton) {
+                    loginButton.disabled = true;
+                    loginButton.textContent = 'Logging In...';
+                }
+
+                // Attempt login via the MongoDB-backed auth API
+                const result = await Auth.login(emailInput.value, passwordInput.value);
+
+                if (result.success) {
+                    showSuccessMessage(result.message);
+
+                    // Get redirect URL if present
+                    const redirectUrl = Auth.getRedirectFromQuery();
+
+                    // Redirect after success
+                    setTimeout(() => {
+                        if (redirectUrl) {
+                            window.location.href = redirectUrl;
+                        } else {
+                            window.location.href = 'index.html';
+                        }
+                    }, 1000);
+                } else {
+                    showErrorMessage(result.message);
+
+                    // Re-enable submit button
+                    if (loginButton) {
+                        loginButton.disabled = false;
+                        loginButton.textContent = 'Login';
+                    }
+                }
+            }
+
+            return {
+                initialize
+            };
+        })();
+
+        // Initialize when DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', LoginPage.initialize);
+        } else {
+            LoginPage.initialize();
+        }
+    </script>
+</body>
+</html>
